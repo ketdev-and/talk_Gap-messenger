@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="coloeWhite">#FFF</color>
+    <color name="tabText">#AFB3C6</color>
+    <color name="textColor">#2196F3</color>
+    <color name="black">#000</color>
+    <color name="chatBg">#F4F4F4</color>
+    <color name="sendMessage">#D6D6D6</color>
+    <color name="dss">#662196F3</color>
+</resources>

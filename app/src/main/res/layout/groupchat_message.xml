@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/chat_bg"
+    android:backgroundTint="#A8000000"
+    android:backgroundTintMode="src_over"
+    android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/sixteen"
+                android:background="@drawable/reciever"
+                android:layout_marginTop="@dimen/eight"
+                >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingVertical="@dimen/four"
+                            android:orientation="horizontal">
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_marginHorizontal="@dimen/sixteen"
+                                        android:src="@drawable/chat_bg"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Ketem"
+                                        android:textColor="@color/coloeWhite"
+                                        android:textStyle="bold"/>
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxWidth="260dp"
+                                android:textColor="@color/coloeWhite"
+                                android:paddingVertical="4dp"
+                                android:textStyle="bold"
+                                android:paddingLeft="14dp"
+                                android:text="chat message ui up for use,up for use, chat message ui up for use, up for use chat message ui up for use, up for use"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginRight="@dimen/sixteen">
+                                I
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/four"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/coloeWhite"
+                                    android:layout_marginBottom="@dimen/eight"
+
+                                    android:text="12:00 Am"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/four"
+                >
+                        <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/sixteen"
+                    android:background="@drawable/sender"
+                    android:layout_marginTop="@dimen/eight"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="260dp"
+                        android:paddingLeft="14dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/coloeWhite"
+                        android:paddingVertical="@dimen/sixteen"
+                        android:text="chat mess use,up for use, chat message ui up for use, up for use chat message ui up for use, up for use"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/sixteen">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/tick"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/four"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/coloeWhite"
+                            android:layout_marginBottom="@dimen/eight"
+                            android:src="@color/textColor"
+                            android:text="12:00 Am"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+</LinearLayout>

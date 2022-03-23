@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coloeWhite"
+    tools:context=".AddGroup">
+
+                    <RelativeLayout
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="match_parent"
+                        android:id="@+id/tab"
+                        android:padding="@dimen/eight"
+                        android:background="@color/coloeWhite"
+                        android:elevation="4dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/thirty_two"
+                            android:layout_height="@dimen/thirty_two"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:id="@+id/arr_back"
+                            android:src="@drawable/back_icon"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/eight"
+                            android:layout_toRightOf="@+id/arr_back"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SelectContact"
+                                android:textColor="@color/textColor"
+                                android:textSize="20sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="277 Contacts"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+
+
+
+                        <ImageView
+                            android:layout_width="33dp"
+                            android:layout_height="33dp"
+                            android:layout_toLeftOf="@+id/menu"
+                            android:layout_marginRight="16dp"
+                            android:layout_centerVertical="true"
+
+                            android:src="@drawable/search"
+                            android:id="@+id/cir_img"
+                            android:scaleType="centerCrop"/>
+
+                        <ImageView
+                            android:layout_width="33dp"
+                            android:layout_height="33dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/menu"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/options_icon"/>
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/v_group_rec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/tab" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/group_rec"
+                        app:layout_constraintTop_toBottomOf="@id/v_group_rec" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/action_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/four"
+                        android:layout_marginBottom="@dimen/twenty_four"
+                        app:backgroundTint="@color/textColor"
+                        app:elevation="2dp"
+                        app:fabCustomSize="64dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:maxImageSize="@dimen/thirty_two"
+                        app:srcCompat="@drawable/arr_fwd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

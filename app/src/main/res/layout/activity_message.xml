@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/coloeWhite"
+            tools:context=".Message">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/eight"
+        app:cardCornerRadius="@dimen/four"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp">
+
+        <RelativeLayout
+            android:id="@+id/newGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/eight">
+
+            <ImageButton
+                android:id="@+id/groupLogo"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/top_background"
+                android:src="@drawable/group_icon" />
+
+            <TextView
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/sixteen"
+                android:layout_toRightOf="@+id/groupLogo"
+                android:padding="10dp"
+                android:text="New Group"
+                android:textColor="@color/textColor"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/shadow"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/group"
+                android:layout_marginLeft="@dimen/sixteen"
+                android:layout_marginTop="@dimen/sixteen"
+                android:layout_toRightOf="@id/groupLogo"
+                android:background="@drawable/shadow" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/eight"
+        app:cardCornerRadius="@dimen/four"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:layout_editor_absoluteX="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/eight">
+
+            <ImageButton
+                android:id="@+id/contactLogo"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/top_background"
+                android:src="@drawable/new_friend" />
+
+            <TextView
+                android:id="@+id/contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/sixteen"
+                android:layout_toRightOf="@+id/contactLogo"
+                android:padding="10dp"
+                android:text="New Contact"
+                android:textColor="@color/textColor"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/contact"
+                android:layout_marginLeft="@dimen/sixteen"
+                android:layout_marginTop="@dimen/sixteen"
+                android:layout_toRightOf="@id/contactLogo"
+
+                android:background="@drawable/shadow" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/mess_tab_lay"
+        style="@style/MyTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:tabIndicatorColor="@color/textColor"
+        app:tabIndicatorHeight="4dp"
+        app:tabMode="fixed"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabTextColor="@color/textColor">
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/contact_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mess_tab_lay" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>

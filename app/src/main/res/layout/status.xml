@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+
+    >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="55dp"
+                android:maxWidth="80dp"
+                android:layout_height="55dp"
+                android:maxHeight="80dp"
+                android:id="@+id/statusImage"
+                android:layout_marginHorizontal="@dimen/four"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/cardview_shadow_start_color"
+                app:civ_border_overlay="true"
+                android:clickable="true"/>
+
+</LinearLayout>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Messenger</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Status">Status</string>
+    <string name="description">Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Aperiam at deleniti
+        dignissimos eligendi fugiat neque, nesciunt,
+        nobis omnis placeat, quas quibusdam quidem quis quod sed
+        soluta temporibus velit voluptate! Vero?</string>
+    <string-array name="group_cat">
+        <item>Select group category</item>
+        <item>Business</item>
+        <item>Sport</item>
+        <item>Religion</item>
+        <item>Health</item>
+    </string-array>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>

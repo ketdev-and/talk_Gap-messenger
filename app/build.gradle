@@ -1,0 +1,75 @@
+//apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
+//apply plugin: 'com.kezong.fat-aar'
+
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+       applicationId "com.talkgap.messenger"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    ////// To create directory folder to output our aar file / location  /////////////////
+   // libraryVariants.all { variant ->
+
+    //    variant.outputs.all { output ->
+    //        outputFileName = "/../../../../chatlib-aar/build-output/release/" + ("Messenger.aar")
+     //   }
+   // }
+    /////////////////// directory closed /////////////
+
+    lintOptions {
+        abortOnError false
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+ext{
+    //this version 4.2.2 is an old version change to latest version once
+    smackVersion = '4.2.2'
+
+    //latest vesion of smack currectly commented out.
+    // smackVersion = '4.4.0'
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'jp.wasabeef:picasso-transformations:2.4.0'
+    implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation "org.igniterealtime.smack:smack-tcp:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-experimental:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-android:$smackVersion"
+    implementation "org.igniterealtime.smack:smack-android-extensions:$smackVersion"
+    implementation "com.hendraanggrian.material:collapsingtoolbarlayout-subtitle:1.1.0"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+}

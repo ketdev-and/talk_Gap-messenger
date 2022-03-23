@@ -1,0 +1,7 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="chatview_recycler_view_padding_huge">125dp</dimen>
+    <dimen name="chatview_recycler_view_padding_normal">50dp</dimen>
+</resources>

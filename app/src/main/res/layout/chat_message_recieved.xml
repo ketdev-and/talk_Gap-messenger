@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/four"
+
+                >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/eight"
+                        android:layout_marginTop="@dimen/four"
+                        android:minWidth="90dp"
+                        android:background="@drawable/reciever"
+                        >
+
+                        <TextView
+                            android:id="@+id/chat_message_body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:lineSpacingExtra="@dimen/four"
+                            android:maxWidth="280dp"
+                            android:paddingVertical="@dimen/four"
+                            android:text="chat message ui up for use,up for use, chat message ui up for use, up for use chat message ui up for use, up for use"
+                            android:textColor="@color/coloeWhite"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|end"
+
+                            android:layout_marginEnd="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/chat_message_body">
+
+
+                            <TextView
+                                android:id="@+id/chat_message_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="8dp"
+                                android:layout_marginVertical="@dimen/eight"
+                                android:layout_marginBottom="@dimen/eight"
+                                android:layout_toRightOf="@+id/thick"
+                                android:src="@color/textColor"
+                                android:text="12:00 Am"
+                                android:textColor="@color/coloeWhite"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+</LinearLayout>

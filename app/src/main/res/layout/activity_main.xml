@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/coloeWhite">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/statusRec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sixteen"
+                android:foregroundGravity="fill"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteY="48dp" />
+
+            <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/mainTab"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/statusRec"
+                            style="@style/MyTabLayout"
+                            app:tabRippleColor="@android:color/transparent"
+                            android:outlineSpotShadowColor="@color/chatBg"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/fourty"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="8dp"
+                            app:tabBackground="@drawable/tab_background"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabSelectedTextColor="@color/coloeWhite"
+                            app:tabTextColor="@color/textColor">
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="monday"
+
+                                />
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="monday" />
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="monday" />
+                        </com.google.android.material.tabs.TabLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="@dimen/eight"
+                android:id="@+id/shadow"
+                app:layout_constraintTop_toBottomOf="@id/mainTab"
+                android:background="@drawable/shadow"/>
+
+            <com.talkgap.messenger.Tab.noScroll
+                android:id="@+id/chatViewPager"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/shadow" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="24dp"
+        app:backgroundTint="@color/textColor"
+
+        app:elevation="12dp"
+        app:fabCustomSize="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/r"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="@dimen/thirty_two"
+        app:srcCompat="@drawable/user_friend" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="optional"
+        app:backgroundTint="@color/textColor"
+        app:elevation="12dp"
+        app:fabCustomSize="64dp"
+        app:layout_constraintBottom_toTopOf="@id/action"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="@dimen/thirty_two"
+        app:srcCompat="@drawable/notification" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="16dp"
+                app:backgroundTint="@color/textColor"
+                app:elevation="12dp"
+                app:fabCustomSize="64dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:maxImageSize="@dimen/thirty_two"
+                app:srcCompat="@drawable/floating_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

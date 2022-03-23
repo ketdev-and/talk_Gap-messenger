@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatMessage"
+    android:background="@color/sendMessage"
+    android:orientation="vertical"
+    android:weightSum="24"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:gravity="start"
+        android:background="@color/coloeWhite"
+        android:elevation="@dimen/four"
+        >
+        <ImageView
+            android:layout_width="@dimen/thirty_two"
+            android:layout_height="@dimen/thirty_two"
+            android:src="@drawable/back_icon"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:id="@+id/adstatusImage"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/cardview_shadow_start_color"
+            app:civ_border_overlay="true"
+            android:src="@color/textColor"
+            android:scaleType="centerCrop"
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ketem Groups"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ay, Kele, Eddy, Onos, Abioko...."
+                android:textColor="@color/black"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="24"
+        android:id="@+id/chat_message"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="6dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="3dp"
+            android:paddingHorizontal="3dp"
+            android:paddingVertical="6dp"
+            app:layout_constraintEnd_toStartOf="@+id/send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/emoji_send"
+                android:layout_marginStart="@dimen/eight"
+                android:src="@drawable/camera" />
+
+            <EditText
+                android:id="@+id/sendEdit"
+                app:layout_constraintStart_toEndOf="@id/emoji_send"
+                app:layout_constraintEnd_toStartOf="@id/send_camera"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="0dp"
+                android:hint="Add Text ...."
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:maxHeight="150dp"
+                android:scrollbars="vertical"
+                android:verticalScrollbarPosition="right"
+                android:paddingHorizontal="2dp"
+                android:paddingVertical="2dp" />
+
+            <ImageView
+                android:id="@+id/attach"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@drawable/attachment" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="2"
+                android:layout_marginEnd="@dimen/eight"
+                android:id="@+id/send_camera"
+                app:layout_constraintStart_toEndOf="@id/sendEdit"
+                app:layout_constraintEnd_toStartOf="@+id/attach"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/emoji" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@id/send"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/top_background"
+                android:scaleType="center"
+                android:src="@drawable/send_icon" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
